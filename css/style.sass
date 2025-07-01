@@ -96,7 +96,7 @@ body
             width: 20%
             .logo_content
                 a
-                    width: 294px
+                    width: 250px
                     height: 70px
                     background-color: $main_color
                     @extend %display_flex
@@ -405,93 +405,51 @@ body
                                         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2)
                                         .product_list_box_content
                                             margin: 0 auto
-                                            h3
-                                                margin: 0
-                                                @extend %product_h3
+                                            padding: 60px
+                                            .list_box_1_img
+                                                margin: 0 auto
+                                                .list_box_1_img_content
+                                                    margin: 0 auto
+                                                    img
+                                                        width: 80%
+                                            .list_box_1_text
+                                                position: relative
+                                                margin-top: 10px
+                                                .list_box_1_text_content
+                                                    margin: 0 auto
+                                                    text-align: center
+                                                    h3
+                                                        margin: 0
+                                                        @extend %product_h3
                                     .list_box_1
                                         position: relative
-                                        width: 799px
-                                        height: 305px
+                                        width: 90%
+                                        height: 90%
                                         background-color: #000
-                                        &::before
-                                            content: ''
-                                            position: absolute
-                                            top: 0
-                                            left: 0
-                                            width: 100%
-                                            height: 100%
-                                            background: url(../images/advantages_ul_list_1.png) no-repeat center center
-                                            background-size: auto
-                                            opacity: 0.2
-                                            transform: scale(.7)
                                     .list_box_2
                                         position: relative
-                                        width: 799px
-                                        height: 305px
+                                        width: 90%
+                                        height: 90%
                                         background-color: #7A6FFF
-                                        &::before
-                                            content: ''
-                                            position: absolute
-                                            top: 0
-                                            left: 0
-                                            width: 100%
-                                            height: 100%
-                                            background: url(../images/advantages_ul_list_2.png) no-repeat center center
-                                            background-size: auto
-                                            opacity: 0.2
-                                            transform: scale(.7)
                                     .list_box_3
                                         position: relative
-                                        width: 799px
-                                        height: 305px
+                                        width: 90%
+                                        height: 90%
                                         background-color: #EF7938
-                                        &::before
-                                            content: ''
-                                            position: absolute
-                                            top: 0
-                                            left: 0
-                                            width: 100%
-                                            height: 100%
-                                            background: url(../images/advantages_ul_list_3.png) no-repeat center center
-                                            background-size: auto
-                                            opacity: 0.2
-                                            transform: scale(.7)
                                     .list_box_4
                                         position: relative
-                                        width: 799px
-                                        height: 305px
+                                        width: 90%
+                                        height: 90%
                                         background-color: #2D86FE
-                                        &::before
-                                            content: ''
-                                            position: absolute
-                                            top: 0
-                                            left: 0
-                                            width: 100%
-                                            height: 100%
-                                            background: url(../images/advantages_ul_list_4.png) no-repeat center center
-                                            background-size: auto
-                                            opacity: 0.2
-                                            transform: scale(.7)
                                     .list_box_5
                                         position: relative
-                                        width: 799px
-                                        height: 305px
+                                        width: 90%
+                                        height: 90%
                                         background-color: #0084FF
-                                        &::before
-                                            content: ''
-                                            position: absolute
-                                            top: 0
-                                            left: 0
-                                            width: 100%
-                                            height: 100%
-                                            background: url(../images/advantages_ul_list_5.png) no-repeat center center
-                                            background-size: auto
-                                            opacity: 0.2
-                                            transform: scale(.7)
                                     .list_box_6
                                         position: relative
-                                        width: 799px
-                                        height: 305px
+                                        width: 90%
+                                        height: 90%
                                         box-shadow: none
                 #marqueeContainer_2
                     position: absolute
@@ -679,51 +637,8 @@ body
                                 li
                                     width: 90%
                                     a
-                                        .list_box_1
-                                            width: 100%
-                                            height: 300px
-                                            margin: 0 auto
-                                            &::before
-                                                transform: scale(.5)
-                                            .product_list_box_content
-                                                h3
-                                                    padding: 60px
-                                        .list_box_2
-                                            width: 100%
-                                            height: 300px
-                                            margin: 0 auto
-                                            &::before
-                                                transform: scale(.5)
-                                            .product_list_box_content
-                                                h3
-                                                    padding: 60px
-                                        .list_box_3
-                                            width: 100%
-                                            height: 300px
-                                            margin: 0 auto
-                                            &::before
-                                                transform: scale(.5)
-                                            .product_list_box_content
-                                                h3
-                                                    padding: 60px
-                                        .list_box_4
-                                            width: 100%
-                                            height: 300px
-                                            margin: 0 auto
-                                            &::before
-                                                transform: scale(.5)
-                                            .product_list_box_content
-                                                h3
-                                                    padding: 60px
-                                        .list_box_5
-                                            width: 100%
-                                            height: 300px
-                                            margin: 0 auto
-                                            &::before
-                                                transform: scale(.5)
-                                            .product_list_box_content
-                                                h3
-                                                    padding: 60px
+                                        display: flex
+                                        justify-content: center
                                         .list_box_6
                                             display: none
 
