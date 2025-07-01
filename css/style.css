@@ -133,7 +133,7 @@ html {
 }
 
 .header .header_content .menu_language .menu_language_content .menu {
-  width: 70%;
+  width: 60%;
 }
 
 .header .header_content .menu_language .menu_language_content .nav-menu {
@@ -172,7 +172,7 @@ html {
 }
 
 .header .header_content .menu_language .menu_language_content .language {
-  width: 10%;
+  width: 20%;
   position: relative;
   display: flex;
   margin-left: 20px;
@@ -367,6 +367,7 @@ html {
   text-align: left;
   line-height: 1.5;
   font-weight: 400;
+  text-align: center;
 }
 
 .main .main_content .advantages .advantages_content .advantages_ul {
