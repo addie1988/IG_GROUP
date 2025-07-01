@@ -515,6 +515,8 @@ html {
   width: 100%;
   height: 100%;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
 }
 
 .main .main_content .product .product_content .product_list .product_list_content ul li a .product_list_box {
@@ -586,7 +588,7 @@ html {
   position: relative;
   width: 90%;
   height: 90%;
-  background-color: #0084FF;
+  background-color: #47a6ff;
 }
 
 .main .main_content .product .product_content .product_list .product_list_content ul li a .list_box_6 {
@@ -854,10 +856,6 @@ html {
   }
   .main .main_content .product .product_content .product_list .product_list_content ul li {
     width: 90%;
-  }
-  .main .main_content .product .product_content .product_list .product_list_content ul li a {
-    display: flex;
-    justify-content: center;
   }
   .main .main_content .product .product_content .product_list .product_list_content ul li a .list_box_6 {
     display: none;
