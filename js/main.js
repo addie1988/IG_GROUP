@@ -1,26 +1,3 @@
-// 載入節
-loadSectionById('header_box', './header.html');
-
-function loadSectionById(id, filePath = './酷炫滑鼠事件效果.html') {
-  if (!id) return;
-
-  fetch(filePath)
-    .then(res => {
-      console.log('Fetch 回應:', res);
-      if (!res.ok) throw new Error(`載入失敗：HTTP ${res.status}`);
-      return res.text();
-    })
-    .then(html => {
-      document.getElementById(id).innerHTML = html;
-    })
-    .catch(err => {
-      console.error('錯誤詳情：', err);
-      document.getElementById(id).innerHTML = '內容載入錯誤';
-    });
-}
-
-// ----------------------------------------------------------------------------------------
-
 // header_top
 const header = document.getElementById('header');
 const spacer = document.getElementById('spacer');
@@ -180,83 +157,90 @@ document.addEventListener('click', (event) => {
 
 // ----------------------------------------------------------------------------------------
 
-// 跑馬燈
-const numberOfLines = 1;
-const imageWidth = 200;
-const imagesPerLine = 10;
-
-// ✅ 可自訂圖片網址
-const imageGroups = [
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
+// 多組跑馬燈配置系統
+const marqueeConfigs = [
+  {
+    containerId: "marqueeContainer",
+    imagePrefix: "games_min",
+    imageCount: 23,
+    lines: 1,
+    altText: "Game",
+    folder: "games_min/"
+  },
+  {
+    containerId: "marqueeContainer_2", 
+    imagePrefix: "product_img",
+    imageCount: 2,
+    lines: 1,
+    altText: "Product",
+    folder: ""
+  },
 ];
 
-const rwd_container = document.getElementById("marqueeContainer");
+// 通用跑馬燈創建函數
+function createMarquee(config) {
+  const container = document.getElementById(config.containerId);
+  if (!container) {
+    console.warn(`找不到跑馬燈容器: ${config.containerId}`);
+    return;
+  }
 
-if (rwd_container) {
   // 清空容器
-  rwd_container.innerHTML = '';
-  
-  for (let i = 0; i < numberOfLines; i++) {
+  container.innerHTML = '';
+
+  // 創建圖片批次
+  const imageBatches = [
+    Array.from(
+      { length: config.imageCount },
+      (_, i) => `./images/${config.folder}${config.imagePrefix}_${i + 1}.png`
+    ),
+    Array.from(
+      { length: config.imageCount },
+      (_, i) => `./images/${config.folder}${config.imagePrefix}_${i + 1}.png`
+    )
+  ];
+
+  for (let lineIndex = 0; lineIndex < config.lines; lineIndex++) {
     const line = document.createElement("div");
     line.className = "marquee-line";
 
     const track = document.createElement("div");
     track.className = "marquee-track";
-    track.classList.add(i % 2 === 0 ? "scroll-left" : "scroll-right");
+    track.classList.add(lineIndex % 2 === 0 ? "scroll-left" : "scroll-right");
 
-    // 為每一行設置不同的動畫速度 - 增加更多變化
-    // 基礎速度範圍：15-45 秒，讓每行速度差異更明顯
-    const minDuration = 15;
-    const maxDuration = 45;
+    // 動畫設定 - 調整為更慢的速度
+    const minDuration = 100;
+    const maxDuration = 300;
     const speedVariation = minDuration + Math.random() * (maxDuration - minDuration);
-    const animationDuration = speedVariation + (i * 2); // 每行額外增加2秒
+    const animationDuration = speedVariation + (lineIndex * 5);
     const animationDelay = -Math.floor(animationDuration / 2);
     track.style.animationDuration = `${animationDuration}s`;
     track.style.animationDelay = `${animationDelay}s`;
 
-    const urls = imageGroups[i % imageGroups.length];
+    const urls = imageBatches[lineIndex % imageBatches.length];
 
-    // 增加複製次數確保無縫接軌 - 從4次增加到6次
-    for (let k = 0; k < 6; k++) {
-      urls.forEach((url) => {
+    // 複製圖片組以實現無限循環效果
+    for (let k = 0; k < 8; k++) {
+      urls.forEach((url, imageIndex) => {
         const img = document.createElement("img");
         img.src = url;
-        img.alt = `Game ${k + 1}`;
-        img.loading = "lazy"; // 優化載入性能
+        img.alt = `${config.altText} ${imageIndex + 1}`;
+        img.loading = "lazy";
         track.appendChild(img);
       });
     }
 
     line.appendChild(track);
-    rwd_container.appendChild(line);
+    container.appendChild(line);
   }
-} else {
-  console.warn("找不到 marqueeContainer 元素");
 }
 
-
-
-
-
+// 初始化所有跑馬燈
+marqueeConfigs.forEach(config => {
+  createMarquee(config);
+});
 
 // ----------------------------------------------------------------------------------------
+
+// 第二個跑馬燈已整合到上方的多組配置系統中
 

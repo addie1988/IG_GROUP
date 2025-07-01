@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./images/Group.png" />
+    <title>JetGram</title>
+    <link rel="stylesheet" href="./css/inside.css">
+</head>
+
+<body>
+    <div class="spacer" id="spacer"></div>
+    <div class="header" id="header">
+        <div class="header_content">
+            <div class="logo">
+                <div class="logo_content">
+                    <a href="./index.html">
+                        <img src="./images/logo.png" alt="Logo">
+                    </a>
+                </div>
+            </div>
+            <div class="menu_language">
+                <div class="menu_language_content">
+                    <div class="hamburger" data-menu="nav-menu-1">☰</div>
+                    <div class="menu nav-menu" id="nav-menu-1">
+                        <div class="menu_content">
+                            <ul>
+                                <li><a class="scroll-link" href="./index.html">首頁</a></li>
+                                <li><a class="scroll-link" href="./index.html">A7 Gaming</a></li>
+                                <li><a class="scroll-link" href="./index.html">Antplay</a></li>
+                                <li><a class="scroll-link" href="./index.html">SPay</a></li>
+                                <li><a class="scroll-link" href="./index.html">JetGram</a></li>
+                                <li><a class="scroll-link" href="./index.html">云支付</a></li>
+                                <li><a class="scroll-link" href="#about_us">关于我们</a></li>
+                                <li><a class="scroll-link" href="#contact_us">联络我们</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="language">
+                        <div class="language_content">
+                            <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
+                                <img id="languageIcon" src="./images/icon_1.svg" alt="繁中">
+                            </a>
+                            <div id="dropdownMenu" class="dropdown-content">
+                                <span onclick="changeLanguage('en')">
+                                    <img src="./images/icon_1.svg" alt="繁中">
+                                    <p>繁中</p>
+                                </span>
+                                <span onclick="changeLanguage('zh-CN')">
+                                    <img src="./images/icon_2.svg" alt="简体中文">
+                                    <p>简体中文</p>
+                                </span>
+                                <span onclick="changeLanguage('ja')">
+                                    <img src="./images/icon_3.svg" alt="English">
+                                    <p>English</p>
+                                </span>
+                                <span onclick="changeLanguage('ja')">
+                                    <img src="./images/icon_4.svg" alt="日文">
+                                    <p>日文</p>
+                                </span>
+                                <span onclick="changeLanguage('pt')">
+                                    <img src="./images/icon_5.svg" alt="한국인">
+                                    <p>한국인</p>
+                                </span>
+                                <span onclick="changeLanguage('pt')">
+                                    <img src="./images/icon_6.svg" alt="Portuguese">
+                                    <p>Português</p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------------------------------------------------------------------------------- -->
+
+    <!-- banner -->
+    <div class="banner">
+        <div class="banner_content">
+            <img src="./images/JetGram.jpg" alt="banner">
+        </div>
+    </div>
+
+    <!-- ---------------------------------------------------------------------------------------------- -->
+
+    <!-- main -->
+    <div class="main">
+        <div class="main_content">
+
+            <!-- product -->
+            <div class="product">
+                <div class="product_content" id="product">
+                    <div class="product_title">
+                        <div class="product_title_content">
+                            <img src="./images/JetGram_logo.png" alt="Logo">
+                        </div>
+                    </div>
+                    <div class="product_list">
+                        <div class="product_list_content">
+                            <p>
+                                JetGram以最高规格的隐私保护技术为基础，让你的每一则讯息都受到完善保护。我们的军事级别端对端加密确保只有你和聊天对象能够看到交流的内容，第三方绝对无法窥探，真正做到私密无忧。还有特殊「自动删除」模式，一旦读取完毕，讯息立即消失，不留任何痕迹。
+                            </p>
+                            <a href="https://addie1988.github.io/JetGram/index.html" target="_blank">
+                                <div class="product_list_bt">
+                                    <div class="product_list_bt_content">
+                                        <img src="./images/product_list_icon.png" alt="">
+                                        <p>官方网站</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <ul id="marqueeContainer_2"></ul>
+                </div>
+
+            </div>
+
+
+            <!-- about_us -->
+            <div class="about_us">
+                <div class="about_us_content" id="about_us">
+                    <div class="about_us_logo">
+                        <div class="about_us_logo_content">
+                            <img src="./images/about_us_logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="about_us_title">
+                        <div class="about_us_title_content">
+                            <img src="./images/about_us_icon.png" alt="">
+                            <h2>关于我们 </h2>
+                        </div>
+                    </div>
+                    <div class="about_us_text">
+                        <div class="about_us_text_content">
+                            <p>
+                                IG
+                                GROUP集团秉承"创新、合作、共赢"的企业文化， 践行互联网七字诀"专注、极致、口碑、快！"鼓励集团成员发挥创造力，追求卓越。 我们相信，通过团队的共同努力和持续创新，IG
+                                GROUP集团将成为全球BC行业的佼佼者。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about_us_img">
+                        <div class="about_us_img_content">
+                            <ol class="rwd_marquee-container" id="marqueeContainer"></ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- contact_us -->
+            <div class="contact_us">
+                <div class="contact_us_content" id="contact_us">
+                    <div class="contact_us_title">
+                        <div class="contact_us_title_content">
+                            <img src="./images/about_us_icon.png" alt="">
+                            <h2>联络我们</h2>
+                        </div>
+                    </div>
+                    <div class="contact_us_text">
+                        <div class="contact_us_text_content">
+                            <a href="https://t.me/Antplay_BD" target="_blank">
+                                <h3>Contact Us</h3>
+                                <p>Registration number: 160629 (0)</p>
+                                <p>Address: Zuikertuintjeweg Z/N (Zuikertuin Tower), Curaçao.</p>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------------------------------------------------------------------------------- -->
+
+    <div class="footer" id="connect">
+        <div class="footer_content">
+            <p>COPYRIGHT © 2025 IG GROUP® ALL RIGHTS RESERVED</p>
+        </div>
+    </div>
+
+    <!-- ---------------------------------------------------------------------------------------------- -->
+
+    <div class="float">
+        <div class="float_content">
+            <ul id="contact_details">
+                <li><a href="https://t.me/Antplay_BD" target="_blank">
+                        <img src="./images/telegram 1.svg" alt="icon">
+                        <p>@Antplay_BD</p>
+                    </a></li>
+                <span></span>
+                <li><a href="https://api.whatsapp.com/send/?phone=%2B18458660888&text&type=phone_number&app_absent=0"
+                        target="_blank">
+                        <img src="./images/whatsapp 1.svg" alt="icon">
+                        <p>+1 (845) 866-0888</p>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="float_rwd">
+        <div class="float_rwd_content">
+            <ul>
+                <li>
+                    <a href="https://t.me/Antplay_BD" target="_blank">
+                        <img src="./images/telegram 1.svg" alt="icon">
+                    </a>
+                </li>
+                <li><a href="https://api.whatsapp.com/send/?phone=%2B18458660888&text&type=phone_number&app_absent=0"
+                        target="_blank">
+                        <img src="./images/whatsapp 1.svg" alt="icon">
+                    </a></li>
+        </div>
+    </div>
+
+    <div class="float_rwd">
+        <div class="float_rwd_content">
+            <ul>
+                <li>
+                    <a href="https://t.me/Antplay_BD" target="_blank">
+                        <img src="./images/telegram 1.svg" alt="icon">
+                    </a>
+                </li>
+                <li><a href="https://api.whatsapp.com/send/?phone=%2B18458660888&text&type=phone_number&app_absent=0"
+                        target="_blank">
+                        <img src="./images/whatsapp 1.svg" alt="icon">
+                    </a>
+                </li>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/main.js"></script>
+    <script>
+        // 翻譯文本
+        const translations = {
+            "en": {
+
+            },
+            "zh-CN": {
+
+            },
+            "ja": {
+
+            },
+            "pt": {
+
+            }
+        };
+
+        let currentLang = 'en'; // ✅ 預設語言為英文
+
+        function toggleDropdown(event) {
+            event.preventDefault();
+            const dropdown = document.getElementById('dropdownMenu');
+            dropdown.classList.toggle('show');
+        }
+
+        function changeLanguage(lang) {
+            currentLang = lang;
+
+            // ✅ 檢查 translations 是否存在
+            if (typeof translations === 'undefined') {
+                console.error("Translations object is not defined.");
+                return;
+            }
+
+            // ✅ 更新所有具有 data-i18n 的元素
+            const elements = document.querySelectorAll("[data-i18n]");
+            elements.forEach(el => {
+                const key = el.getAttribute("data-i18n");
+                if (translations[lang]?.[key]) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.value = translations[lang][key];
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
+                }
+            });
+
+            // ✅ 更新語言圖示
+            const languageIcon = document.getElementById('languageIcon');
+            const langIconMap = {
+                'en': '1',
+                'zh-CN': '2',
+                'ja': '3',
+                'pt': '4'
+            };
+            languageIcon.src = `./images/icon_${langIconMap[lang] || '1'}.svg`;
+
+            // ✅ 關閉語言選單
+            document.getElementById('dropdownMenu').classList.remove('show');
+
+            // ✅ 設定 <html lang="">
+            document.documentElement.lang = lang;
+        }
+
+        // ✅ 頁面載入後初始化為英文
+        document.addEventListener('DOMContentLoaded', function () {
+            changeLanguage(currentLang); // 預設語言與圖示設定
+        });
+    </script>
+</body>
+
+</html>

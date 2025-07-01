@@ -49,14 +49,14 @@ $main_color: #E60012
 $main_color_span: #410005
 
 %main_title
-    font-size: 40px
+    font-size: 26px
     font-weight: 900
     color: $main_color
     margin-top: 10px
 
 %product_h3
     color: #fff
-    font-size: 40px
+    font-size: 26px
     font-weight: 900
     margin-top: 10px
 
@@ -90,10 +90,10 @@ body
         width: 100%
         display: flex
         align-items: center
-        justify-content: flex-end
+        justify-content: space-between
         margin: 0 auto
         .logo
-            width: $flex_width
+            width: 20%
             .logo_content
                 a
                     width: 294px
@@ -101,7 +101,7 @@ body
                     background-color: $main_color
                     @extend %display_flex
         .menu_language
-            width: $flex_width
+            width: 60%
             display: flex
             align-items: center
             justify-content: space-between
@@ -109,7 +109,7 @@ body
                 width: 100%
                 display: flex
                 align-items: center
-                justify-content: flex-end
+                justify-content: right
                 .hamburger
                     font-size: 1.5em
                     cursor: pointer
@@ -126,7 +126,9 @@ body
                             display: flex
                             justify-content: space-between
                             flex-wrap: wrap
+                            line-height: 1.5
                             li
+                                margin: 0 6px
                                 a
                                     font-size: 14px
                                     color: #000000
@@ -137,7 +139,7 @@ body
                 .show
                     display: block
                 .language
-                    width: 20%
+                    width: 10%
                     position: relative
                     display: flex
                     margin-left: 20px
@@ -192,7 +194,7 @@ body
                             li
                                 a
                                     color: #fff
-@media screen and (max-width: 770px)
+@media screen and (max-width: 1156px)
     .header
         .header_content
             .logo
@@ -223,11 +225,10 @@ body
                                         width: 100%
                                         display: inline-block
                                         margin: 0 20px
-                                        text-shadow: 3px 3px 2px rgba(0, 0, 0,6)
                     .show
                         display: flex
                         z-index: 3
-                        background: rgba(230, 0, 18, 0.6)
+                        background: rgba(230, 0, 18, 0.8)
                         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2)
 // -----------------------------------------------------------------------------------------
 
@@ -263,8 +264,8 @@ body
         position: absolute
         top: 0
         left: 0
-        width: 18%
-        height: 26%
+        width: 281px
+        height: 473px
         background: url(../images/advantages_img.png) no-repeat center center
         z-index: -1
     .main_content
@@ -365,17 +366,7 @@ body
                                                             line-height: 1.5
         .product
             position: relative
-            &::after
-                content: ''
-                position: absolute
-                bottom: 0
-                left: 0
-                right: 0
-                margin: 0 auto
-                width: 590px
-                height: 95px
-                z-index: -1
-                background: url(../images/product_img.png) no-repeat center center
+            overflow: hidden
             .product_content
                 margin: 0 auto
                 text-align: center
@@ -390,7 +381,8 @@ body
                             @extend %main_title
                 .product_list
                     position: relative
-                    padding-top: 134px
+                    padding-top: 90px
+                    padding-bottom: 90px
                     .product_list_content
                         margin: 0 auto
                         max-width: $max-width
@@ -430,7 +422,7 @@ body
                                             background: url(../images/advantages_ul_list_1.png) no-repeat center center
                                             background-size: auto
                                             opacity: 0.2
-                                            transform: scale(.6)
+                                            transform: scale(.7)
                                     .list_box_2
                                         position: relative
                                         width: 799px
@@ -446,6 +438,7 @@ body
                                             background: url(../images/advantages_ul_list_2.png) no-repeat center center
                                             background-size: auto
                                             opacity: 0.2
+                                            transform: scale(.7)
                                     .list_box_3
                                         position: relative
                                         width: 799px
@@ -461,6 +454,7 @@ body
                                             background: url(../images/advantages_ul_list_3.png) no-repeat center center
                                             background-size: auto
                                             opacity: 0.2
+                                            transform: scale(.7)
                                     .list_box_4
                                         position: relative
                                         width: 799px
@@ -476,6 +470,7 @@ body
                                             background: url(../images/advantages_ul_list_4.png) no-repeat center center
                                             background-size: auto
                                             opacity: 0.2
+                                            transform: scale(.7)
                                     .list_box_5
                                         position: relative
                                         width: 799px
@@ -491,15 +486,56 @@ body
                                             background: url(../images/advantages_ul_list_5.png) no-repeat center center
                                             background-size: auto
                                             opacity: 0.2
+                                            transform: scale(.7)
                                     .list_box_6
                                         position: relative
                                         width: 799px
                                         height: 305px
                                         box-shadow: none
+                #marqueeContainer_2
+                    position: absolute
+                    left: 0
+                    right: 0
+                    bottom: 50px
+                    z-index: -1
+                    opacity: 0.3
+                    .marquee-line
+                        .marquee-track
+                            display: flex
+                            position: absolute
+                            top: 0
+                            left: 0
+                            .marquee-item
+                                flex-shrink: 0
+                                padding-right: 10px
+                                img
+                                    height: 120px
+                                    width: 200px
+                                    object-fit: cover
+                                    flex-shrink: 0
+                        .scroll-left
+                            animation: marqueeContainer_2-left 150s linear infinite
+                            animation-play-state: running
+                            img
+                                margin: 0 20px
+                        .scroll-right
+                            animation: marqueeContainer_2-left 150s reverse linear infinite
+                            animation-play-state: running
+                            img
+                                margin: 0 20px
         .about_us
             position: relative
             border-top: 2px solid #fff
             border-bottom: 2px solid #fff
+            &::before
+                content: ''
+                position: absolute
+                top: 0
+                right: 0
+                width: 281px
+                height: 473px
+                z-index: 1
+                background: url(../images/about_us_img.png) no-repeat center center
             &::after
                 content: ''
                 position: absolute
@@ -526,9 +562,6 @@ body
                         h2
                             @extend %main_title
                             color: #fff
-                            h2
-                                @extend %main_title
-                                color: #fff
                 .about_us_text
                     position: relative
                     padding-top: 60px
@@ -550,6 +583,7 @@ body
                             flex-direction: column
                             gap: 10px
                             padding: 20px 0
+                            padding-bottom: 68px
                     .marquee-line
                         width: 100%
                         height: 126px
@@ -569,14 +603,49 @@ body
                                     object-fit: cover
                                     flex-shrink: 0
                         .scroll-left
-                            animation: scroll-left linear infinite
-                            img
-                                margin: 0 20px
+                            animation: scroll-left 180s linear infinite
+                            animation-play-state: running
                         .scroll-right
-                            animation: scroll-left reverse linear infinite
-                        &:hover
-                            .marquee-track
-                                animation-play-state: paused
+                            animation: scroll-left 180s reverse linear infinite
+                            animation-play-state: running
+                        // 移除hover暫停效果，讓跑馬燈持續滾動
+        .contact_us
+            position: relative
+            background-color: $main_color
+            .contact_us_content
+                margin: 0 auto
+                text-align: center
+                .contact_us_title
+                    position: relative
+                    padding-top: 56px
+                    .contact_us_title_content
+                        margin: 0 auto
+                        img
+                        h2
+                            @extend %main_title
+                            color: #fff
+                .contact_us_text
+                    position: relative
+                    padding-top: 55px
+                    padding-bottom: 42px
+                    .contact_us_text_content
+                        margin: 0 auto
+                        a
+                            line-height: 2
+                            color: #fff
+                            text-decoration: none
+
+@keyframes scroll-left
+    0%
+        transform: translateX(0)
+    100%
+        transform: translateX(-50%)
+
+@keyframes marqueeContainer_2-left
+    0%
+        transform: translateX(0)
+    100%
+        transform: translateX(-50%)
 
 @keyframes advantages_ul_list_content_odd
     0%
@@ -607,51 +676,55 @@ body
                         .product_list_content
                             ul
                                 li
-                                    width: 100%
+                                    width: 90%
                                     a
                                         .list_box_1
-                                            width: 90%
-                                            height: 200px
+                                            width: 100%
+                                            height: 300px
                                             margin: 0 auto
+                                            &::before
+                                                transform: scale(.5)
                                             .product_list_box_content
                                                 h3
                                                     padding: 60px
                                         .list_box_2
-                                            width: 90%
-                                            height: 200px
+                                            width: 100%
+                                            height: 300px
                                             margin: 0 auto
+                                            &::before
+                                                transform: scale(.5)
                                             .product_list_box_content
                                                 h3
                                                     padding: 60px
                                         .list_box_3
-                                            width: 90%
-                                            height: 200px
+                                            width: 100%
+                                            height: 300px
                                             margin: 0 auto
+                                            &::before
+                                                transform: scale(.5)
                                             .product_list_box_content
                                                 h3
                                                     padding: 60px
                                         .list_box_4
-                                            width: 90%
-                                            height: 200px
+                                            width: 100%
+                                            height: 300px
                                             margin: 0 auto
+                                            &::before
+                                                transform: scale(.5)
                                             .product_list_box_content
                                                 h3
                                                     padding: 60px
                                         .list_box_5
-                                            width: 90%
-                                            height: 200px
+                                            width: 100%
+                                            height: 300px
                                             margin: 0 auto
+                                            &::before
+                                                transform: scale(.5)
                                             .product_list_box_content
                                                 h3
                                                     padding: 60px
                                         .list_box_6
                                             display: none
-
-@keyframes scroll-left
-    0%
-        transform: translateX(0)
-    100%
-        transform: translateX(-50%)
 
 @media screen and (max-width: 1120px)
     .main
@@ -673,10 +746,40 @@ body
                                             width: 38%
                                             &:nth-child(8)
                                                 border: none
+                                            &:nth-child(odd)
+                                                animation: none
+                                            &:nth-child(even)
+                                                animation: none
 
 @media screen and (max-width: 860px)
     .main
         .main_content
+            .advantages
+                .advantages_content
+                    .advantages_text
+                    .advantages_ul
+                        .advantages_ul_content
+                            .advantages_ul_title
+                            .advantages_ul_list
+                                .advantages_ul_list_content
+                                    ul
+                                        li
+                                            .advantages_ul_box
+                                                .advantages_ul_box_content
+                                                    .advantages_ul_box_img
+                                                        .advantages_ul_box_text
+                                                            .advantages_ul_box_text_content
+                                                                padding: 10px
+            .product
+            .about_us
+                &::before
+                    width: 0
+                .about_us_content
+                    .about_us_logo
+                    .about_us_title
+                    .about_us_text
+                        .about_us_text_content
+                            width: 90%
 
 @media screen and (max-width: 765px)
     .main
@@ -695,20 +798,121 @@ body
                                         li
                                             width: 45%
 
-// -----------------------------------------------------------------------------------------    
+@media screen and (max-width: 280px)
+    .main
+        .main_content
+            .advantages
+                .advantages_content
+                    .advantages_text
+                    .advantages_ul
+                        .advantages_ul_content
+                            .advantages_ul_title
+                            .advantages_ul_list
+                                .advantages_ul_list_content
+                                    ul
+                                        li
+                                            width: 90%
+                                            .advantages_ul_box
+                                                .advantages_ul_box_content
+                                                    .advantages_ul_box_img
+                                                        .advantages_ul_box_text
+                                                            .advantages_ul_box_text_content
+            .product
+            .about_us
+                .about_us_content
+                    .about_us_logo
+                    .about_us_title
+                    .about_us_text
+                        .about_us_text_content
 
+// -----------------------------------------------------------------------------------------   
+
+    // footer
 .footer
     position: relative
     .footer_content
+        width: 100%
+        height: 40px
+        max-width: $max-width
         margin: 0 auto
-        width: $max-width
         text-align: center
-        padding: 10px 0
+        @extend %display_flex
         p
-            color: #000000
+            color: #000
             font-size: 12px
-@media screen and (max-width: 1192px)
-    .footer
-        .footer_content
-            width: 90%
+            font-weight: 400
+            text-align: center
+            line-height: 1.5
+
+// -----------------------------------------------------------------------------------------        
+
+.float
+    position: fixed
+    right: 0
+    bottom: 4%
+    z-index: 2
+    .float_content
+        margin: 0 auto
+        background: rgba(230, 0, 18, 0.8)
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2)
+        width: 85px
+        border-top-left-radius: 10px
+        border-bottom-left-radius: 10px
+        ul
+            padding: 0.5px
+            li
+                margin: 20px 0
+                a
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: center
+                    text-decoration: none
+                    img
+                    p
+                        font-size: 11px
+                        color: #fff
+                        margin-top: 20px
+                        text-align: center
+                        line-height: 1.8
+            span
+                border-bottom: 2px solid #ffffff
+                width: 60%
+                display: block
+                margin: 0 auto
+
+.float_rwd
+    position: relative
+    display: none
+    .float_rwd_content
+        margin: 0 auto
+        ul
+            li
+                width: 60px
+                height: 60px
+                margin: 20px 0
+                background: rgba(230, 0, 18, 0.8)
+                border-radius: 50%
+                display: flex
+                justify-content: center
+                align-items: center
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2)
+                a
+                    text-decoration: none
+                    padding: 10px
+                    img
+                        width: 30px
+
+@media screen and (max-width: 500px)
+    .float
+        display: none
+    .float_rwd
+        position: fixed
+        right: 10px
+        bottom: 100px
+        display: block
+        z-index: 2
+        .float_rwd_content
+            ul
+                li
+
 // -----------------------------------------------------------------------------------------    
