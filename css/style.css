@@ -341,7 +341,7 @@ html {
 .main .main_content .advantages .advantages_content .advantages_text .advantages_text_content {
   margin: 0 auto;
   display: block;
-  justify-items: center;
+  text-align: center;
 }
 
 .main .main_content .advantages .advantages_content .advantages_text .advantages_text_content .advantages_text_img {
