@@ -1106,7 +1106,7 @@ html {
 
 @media screen and (max-width: 1120px) {
   .main .main_content .product .product_content .product_title .product_title_content img {
-    width: 40%;
+    width: 80%;
   }
   .main .main_content .product .product_content .product_list .product_list_content {
     width: 90%;
