@@ -476,7 +476,7 @@ html {
 
 .main .main_content .advantages .advantages_content .advantages_ul .advantages_ul_content .advantages_ul_list .advantages_ul_list_content ul li .advantages_ul_box .advantages_ul_box_content .advantages_ul_box_text .advantages_ul_box_text_content h3 {
   color: #E60012;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 900;
   margin-bottom: 10px;
 }
@@ -718,7 +718,8 @@ html {
 
 .main .main_content .about_us .about_us_content .about_us_logo {
   position: relative;
-  padding-top: 91px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .main .main_content .about_us .about_us_content .about_us_logo .about_us_logo_content {
@@ -727,7 +728,6 @@ html {
 
 .main .main_content .about_us .about_us_content .about_us_title {
   position: relative;
-  padding-top: 60px;
 }
 
 .main .main_content .about_us .about_us_content .about_us_title .about_us_title_content {
@@ -845,6 +845,15 @@ html {
   line-height: 2;
   color: #fff;
   text-decoration: none;
+}
+
+.main .main_content .contact_us .contact_us_content .contact_us_text .contact_us_text_content a h3 {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.main .main_content .contact_us .contact_us_content .contact_us_text .contact_us_text_content a p {
+  font-size: 14px;
 }
 
 @keyframes scroll-left {

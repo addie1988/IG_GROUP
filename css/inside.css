@@ -1080,11 +1080,11 @@ html {
 
 .main .main_content .product .product_content .product_list .product_list_content a .product_list_bt {
   position: relative;
-  width: 332px;
-  height: 88px;
+  width: 310px;
+  height: 78px;
   display: inline-block;
   background-color: #E60012;
-  border-radius: 16px;
+  border-radius: 10px;
   overflow: hidden;
   margin-top: 70px;
   margin-bottom: 70px;
