@@ -642,7 +642,7 @@ html {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 50px;
+  bottom: 100px;
   z-index: -1;
   opacity: 0.1;
 }
