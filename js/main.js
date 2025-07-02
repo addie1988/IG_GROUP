@@ -209,8 +209,8 @@ function createMarquee(config) {
     track.classList.add(lineIndex % 2 === 0 ? "scroll-left" : "scroll-right");
 
     // 動畫設定 - 調整為更慢的速度
-    const minDuration = 100;
-    const maxDuration = 300;
+    const minDuration = 60;
+    const maxDuration = 150;
     const speedVariation = minDuration + Math.random() * (maxDuration - minDuration);
     const animationDuration = speedVariation + (lineIndex * 5);
     const animationDelay = -Math.floor(animationDuration / 2);
