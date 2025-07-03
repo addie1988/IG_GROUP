@@ -193,6 +193,11 @@ html {
   height: 29px;
 }
 
+.header .header_content .menu_language .menu_language_content .language .language_content .dropdown-toggle img {
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
 .header .header_content .menu_language .menu_language_content .language .dropdown-content {
   display: none;
   position: absolute;
