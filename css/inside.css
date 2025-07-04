@@ -1113,7 +1113,7 @@ html {
   height: 100%;
   z-index: 1;
   background: url(../images/product_list_bt.png) no-repeat center center;
-  filter: opacity(0.3);
+  filter: opacity(0.8);
 }
 
 .main .main_content .product .product_content .product_list .product_list_content a .product_list_bt .product_list_bt_content {
