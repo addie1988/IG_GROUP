@@ -691,7 +691,6 @@ html {
 
 .main .main_content .about_us {
   position: relative;
-  border-bottom: 2px solid #fff;
 }
 
 .main .main_content .about_us::before {
@@ -762,7 +761,7 @@ html {
 
 .main .main_content .about_us .about_us_content .about_us_img {
   position: relative;
-  padding-top: 73px;
+  padding: 90px 0;
 }
 
 .main .main_content .about_us .about_us_content .about_us_img .about_us_img_content {
@@ -774,7 +773,6 @@ html {
   flex-direction: column;
   gap: 10px;
   padding: 20px 0;
-  padding-bottom: 68px;
 }
 
 .main .main_content .about_us .about_us_content .about_us_img .marquee-line {
@@ -825,7 +823,6 @@ html {
 
 .main .main_content .contact_us .contact_us_content .contact_us_title {
   position: relative;
-  padding-top: 56px;
 }
 
 .main .main_content .contact_us .contact_us_content .contact_us_title .contact_us_title_content {
