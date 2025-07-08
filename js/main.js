@@ -170,7 +170,7 @@ const marqueeConfigs = [
   {
     containerId: "marqueeContainer_2", 
     imagePrefix: "product_img",
-    imageCount: 2,
+    imageCount: 24,
     lines: 1,
     altText: "Product",
     folder: ""
@@ -206,11 +206,11 @@ function createMarquee(config) {
 
     const track = document.createElement("div");
     track.className = "marquee-track";
-    track.classList.add(lineIndex % 2 === 0 ? "scroll-left" : "scroll-right");
+    track.classList.add(lineIndex % 2 === 0 ? "scroll-right" : "scroll-left");
 
     // 動畫設定 - 調整為更慢的速度
-    const minDuration = 60;
-    const maxDuration = 150;
+    const minDuration = 240;
+    const maxDuration = 560;
     const speedVariation = minDuration + Math.random() * (maxDuration - minDuration);
     const animationDuration = speedVariation + (lineIndex * 5);
     const animationDelay = -Math.floor(animationDuration / 2);

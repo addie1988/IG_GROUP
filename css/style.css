@@ -296,6 +296,15 @@ html {
   }
 }
 
+@media screen and (max-width: 340px) {
+  .header .header_content .logo .logo_content a {
+    width: 9rem;
+  }
+  .header .header_content .logo .logo_content a img {
+    width: 8rem;
+  }
+}
+
 .banner {
   position: relative;
   width: 100%;
@@ -335,7 +344,7 @@ html {
   top: 0;
   left: 0;
   width: 281px;
-  height: 473px;
+  height: 600px;
   background: url(../images/advantages_img.png) no-repeat center center;
   z-index: -1;
 }
@@ -391,7 +400,7 @@ html {
 
 .main .main_content .advantages .advantages_content .advantages_ul {
   position: relative;
-  margin-top: 65px;
+  margin-top: 160px;
 }
 
 .main .main_content .advantages .advantages_content .advantages_ul .advantages_ul_content {
@@ -409,7 +418,7 @@ html {
 
 .main .main_content .advantages .advantages_content .advantages_ul .advantages_ul_content .advantages_ul_list {
   position: relative;
-  margin-top: 88px;
+  margin-top: 80px;
 }
 
 .main .main_content .advantages .advantages_content .advantages_ul .advantages_ul_content .advantages_ul_list .advantages_ul_list_content {
@@ -495,6 +504,7 @@ html {
 .main .main_content .product {
   position: relative;
   overflow: hidden;
+  padding-top: 160px;
 }
 
 .main .main_content .product .product_content {
@@ -504,7 +514,6 @@ html {
 
 .main .main_content .product .product_content .product_title {
   position: relative;
-  padding-top: 73px;
 }
 
 .main .main_content .product .product_content .product_title .product_title_content {
@@ -515,7 +524,7 @@ html {
 .main .main_content .product .product_content .product_list {
   position: relative;
   padding-top: 40px;
-  padding-bottom: 150px;
+  padding-bottom: 260px;
 }
 
 .main .main_content .product .product_content .product_list .product_list_content {
@@ -561,7 +570,7 @@ html {
   width: 100%;
   height: 100%;
   background: url(../images/product_list_box_img.png) no-repeat center center;
-  opacity: 0.2;
+  opacity: 0.1;
   z-index: 1;
 }
 
@@ -647,9 +656,8 @@ html {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 100px;
+  bottom: 60px;
   z-index: -1;
-  opacity: 0.1;
 }
 
 .main .main_content .product .product_content #marqueeContainer_2 .marquee-line .marquee-track {
@@ -672,21 +680,21 @@ html {
 }
 
 .main .main_content .product .product_content #marqueeContainer_2 .marquee-line .scroll-left {
-  animation: marqueeContainer_2-left 150s linear infinite;
+  animation: marqueeContainer_2-left 300s linear infinite;
   animation-play-state: running;
 }
 
 .main .main_content .product .product_content #marqueeContainer_2 .marquee-line .scroll-left img {
-  margin: 0 20px;
+  margin: 0 14px;
 }
 
 .main .main_content .product .product_content #marqueeContainer_2 .marquee-line .scroll-right {
-  animation: marqueeContainer_2-left 150s reverse linear infinite;
+  animation: marqueeContainer_2-left 300s reverse linear infinite;
   animation-play-state: running;
 }
 
 .main .main_content .product .product_content #marqueeContainer_2 .marquee-line .scroll-right img {
-  margin: 0 20px;
+  margin: 0 14px;
 }
 
 .main .main_content .about_us {
