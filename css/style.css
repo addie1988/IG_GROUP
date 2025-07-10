@@ -72,6 +72,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background: url(../images/bg.png);
+  background-size: auto;
+}
+
 @media screen and (max-width: 790px) {
   body {
     background-size: initial;
